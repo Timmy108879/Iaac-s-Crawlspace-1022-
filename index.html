@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaac's Crawlspace</title>
+    <style>
+        :root {
+            --bg-color: #0d0e12;
+            --surface-color: #161821;
+            --accent-color: #00ff66;
+            --text-color: #cdd6f4;
+            --text-muted: #6c7086;
+            --border-color: #2e313f;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding-bottom: 20px;
+            border-bottom: 2px dashed var(--border-color);
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(0, 255, 102, 0.3);
+        }
+
+        header p {
+            color: var(--text-muted);
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(0, 255, 102, 0.1);
+        }
+
+        .card-preview {
+            height: 180px;
+            background-color: #1e2030;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--border-color);
+            font-size: 3rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-btn {
+            display: inline-block;
+            background: transparent;
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .card-btn:hover {
+            background: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        footer {
+            max-width: 1200px;
+            margin: 60px auto 20px auto;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>[ Isaac's Crawlspace ]</h1>
+        <p>Underground arcade & experimental builds. Proceed with caution.</p>
+    </header>
+
+    <div class="container">
+        <main class="grid">
+            
+            <div class="card">
+                <div class="card-preview">🕹️</div>
+                <div class="card-content">
+                    <h2 class="card-title">Project: Breach</h2>
+                    <p class="card-description">A fast-paced cyber hacking arcade game. Bypass the firewalls before the tracer locks you down.</p>
+                    <a href="#" class="card-btn">Launch Game</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-preview">👾</div>
+                <div class="card-content">
+                    <h2 class="card-title">Void Run</h2>
+                    <p class="card-description">An endless neon runner built using pure JavaScript and Canvas. How deep into the void can you go?</p>
+                    <a href="#" class="card-btn">Launch Game</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-preview">💀</div>
+                <div class="card-content">
+                    <h2 class="card-title">Glitch Dungeon</h2>
+                    <p class="card-description">A rogue-lite where the bugs are your features. Manipulate reality to escape the crawlspace.</p>
+                    <a href="#" class="card-btn">Launch Game</a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Isaac's Crawlspace // Unauthorized duplication is highly encouraged.</p>
+    </footer>
+
+</body>
+</html>
